@@ -1,0 +1,195 @@
+:root {
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+  --LightGrayishCyan1: hsl(180, 52%, 96%);
+  --LightGrayishCyan2: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+body {
+  font-family: "League Spartan", sans-serif;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding: 0px 150px;
+  height: 100%;
+  position: relative;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-image: url(/images/bg-header-desktop.svg);
+  width: 100vw;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid var(--DesaturatedDarkCyan);
+  border-radius: 3px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.item img {
+  width: 80px;
+  cursor: pointer;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 25px;
+}
+.item .left .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item .left .extra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.item .left .extra span {
+  border-radius: 10px;
+  padding: 7px;
+}
+.item .left .extra span:first-of-type {
+  color: white;
+  background-color: var(--DesaturatedDarkCyan);
+  font-size: 11.3px;
+  font-weight: 700;
+}
+.item .left .extra span:last-of-type {
+  color: white;
+  background-color: var(--VeryDarkGrayishCyan);
+  font-size: 11.3px;
+  font-weight: 700;
+}
+.item .left .title :first-of-type {
+  color: var(--DesaturatedDarkCyan);
+  font-weight: 700;
+}
+.content p {
+  color: var(--VeryDarkGrayishCyan);
+  font-weight: 700;
+  font-size: 23px;
+  cursor: pointer;
+}
+.content .details span {
+  color: var(--DarkGrayishCyan);
+  font-weight: 500;
+  font-size: 15px;
+  padding-right: 30px;
+}
+.details span:nth-of-type(2),
+.details span:nth-of-type(1) {
+  position: relative;
+}
+.details span:nth-of-type(1)::before,
+.details span:nth-of-type(2)::before {
+  content: "•";
+  color: var(--DarkGrayishCyan);
+  position: absolute;
+  left: 60px;
+}
+
+/* Optional: Remove the margin for the last span to avoid extra spacing */
+.content .details span:last-child {
+  margin-right: 0;
+}
+.right {
+  display: flex;
+  gap: 15px;
+  padding-right: 20px;
+}
+.right span {
+  color: var(--DesaturatedDarkCyan);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--LightGrayishCyan2);
+  cursor: pointer;
+}
+.right span:hover {
+  color: white;
+  background-color: var(--DesaturatedDarkCyan);
+}
+.filter-list {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: white;
+  margin-bottom: 50px;
+  border-radius: 3px;
+  position: relative;
+  top: -35px;
+}
+.filter-list .tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+.tag span {
+  color: var(--DesaturatedDarkCyan);
+  padding: 5px;
+  border-radius: 3px;
+  background-color: var(--LightGrayishCyan2);
+  cursor: pointer;
+}
+.tag img {
+  cursor: pointer;
+  background-color: var(--DesaturatedDarkCyan);
+  padding: 5px;
+  border-radius: 0px 3px 3px 0px;
+}
+.tag img:hover {
+  background-color: var(--DarkGrayishCyan);
+}
+.clear {
+  color: var(--DesaturatedDarkCyan);
+  font-weight: 700;
+  cursor: pointer;
+}
+.clear:hover {
+  text-decoration: underline;
+}
+.hide-filter {
+  display: none;
+}
